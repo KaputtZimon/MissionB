@@ -1,59 +1,45 @@
 ﻿using MissionBlack.Properties;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MissionBlack
 {
     class Target : ImageBase
     {
-        //private Rectangle targetArea = new Rectangle();
-        
-
         public Target() : base(Resources.Target)
         {
         }
 
         public PointF Origin
         {
-            get
-            {
-                return new PointF(iLeft, iTop);
-            }
+            get { return new PointF(ILeft, ITop); }
         }
+
         public double CurrentRadius
         {
             get
             {
-                return (double)(width / 2);
+                return (double)(Width / 2);
             }
         }
 
         public bool Update()
         {
-            if (growing)
+            if (Growing)
             {
-                width = width + 8;
-                height = height + 8;
-                left = iLeft - (width / 2);
-                top = iTop - (height / 2);
-                if (width >= 80 && height >= 80) growing = false;
+                Width = Width + 8;
+                Height = Height + 8;
+                Left = ILeft - (Width / 2);
+                Top = ITop - (Height / 2);
+                if (Width >= 80 && Height >= 80) Growing = false;
                 return false;
             }
             else
             {
-                width = width - 8;
-                height = height - 8;
-                left = iLeft - (width / 2);
-                top = iTop - (height / 2);
-                if (width <= 0 && height <= 0)
-                {
-                    return true;
-                }
-                return false;
+                Width = Width - 8;
+                Height = Height - 8;
+                Left = ILeft - (Width / 2);
+                Top = ITop - (Height / 2);
+                return Width <= 0 && Height <= 0;
             }
         }
     }

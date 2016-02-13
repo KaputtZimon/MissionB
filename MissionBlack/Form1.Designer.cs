@@ -1,6 +1,6 @@
 ﻿namespace MissionBlack
 {
-    partial class Mainframe
+    sealed partial class Mainframe
     {
         /// <summary>
         /// Required designer variable.
@@ -66,7 +66,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Mainframe_KeyDown);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mainframe_MouseClick);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Mainframe_MouseMove);
             this.ResumeLayout(false);
 
         }

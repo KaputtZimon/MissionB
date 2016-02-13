@@ -1,40 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace MissionBlack
 {
     class ImageBase
     {
-        public Bitmap bitmap;
-        private int bX = 0;
-        private int bY = 0;
-        private int bWidth = 1;
-        private int bHeight = 1;
-        private int initialLeft;
-        private int initialTop;
-        private bool grow = true;
-
-        public int iLeft { get { return initialLeft; } set { initialLeft = value; } }
-        public int iTop { get { return initialTop; } set { initialTop = value; } }
-        public int left { get { return bX; } set { bX = value; } }
-        public int top { get { return bY; } set { bY = value; } }
-        public int width { get { return bWidth; } set { bWidth = value; } }
-        public int height { get { return bHeight; } set { bHeight = value; } }
-        public bool growing { get { return grow; } set { grow = value; } }
+        public Bitmap Bitmap;
+        public int ILeft { get; set; }
+        public int ITop { get; set; }
+        public int Left { get; set; } = 0;
+        public int Top { get; set; } = 0;
+        public int Width { get; set; } = 1;
+        public int Height { get; set; } = 1;
+        public bool Growing { get; set; } = true;
 
         public ImageBase(Bitmap resource)
         {
-            bitmap = new Bitmap(resource);
+            Bitmap = new Bitmap(resource);
         }
 
         public void DrawImage(Graphics graphic)
         {
-            graphic.DrawImage(bitmap, bX, bY, bWidth, bHeight);
+            graphic.DrawImage(Bitmap, Left, Top, Width, Height);
         }
-
     }
 }

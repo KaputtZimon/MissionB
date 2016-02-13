@@ -1,51 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MissionBlack
 {
     class InterfaceManager : Stats
     {
-        public InterfaceManager()
-        {
 
-        }
+        public Action AddTargetAction { get; set; }
+       
         public void Update()
         {
-            if (lives == 0)
+            if (Lives == 0)
             {
                 //End of game
             }
-            if (gameLeftTime == 0)
+            if (GameLeftTime == 0)
             {
                 //End of game
             }
-            if (roundLeftTime == 0)
+            if (RoundLeftTime == 0)
             {
-                roundLeftTime = 15;
-                round = round + 1;
-                //targets.Add(target = new Target() { iLeft = rnd.Next(100, 400), iTop = rnd.Next(100, 400), width = 0, height = 0 });
+                RoundLeftTime = 15;
+                Round = Round + 1;
+
+                AddTargetAction?.Invoke();                
             }
-            gameLeftTime = gameLeftTime - 1;
-            roundLeftTime = roundLeftTime - 1;
+            GameLeftTime = GameLeftTime - 1;
+            RoundLeftTime = RoundLeftTime - 1;
         }
         public void Hit()
         {
-            hits = hits + 1;
-            accuracy = (hits / (hits + misses)) * 100;
-            score = score + 1000;
+            Hits = Hits + 1;
+            Accuracy = (Hits / (Hits + Misses)) * 100;
+            Score = Score + 1000;
         }
         public void Miss()
         {
-            misses = misses + 1;
-            accuracy = hits / (hits + misses) * 100;
-            score = score - 5000;
+            Misses = Misses + 1;
+            Accuracy = Hits / (Hits + Misses) * 100;
+            Score = Score - 5000;
         }
         public void Failed(int fails)
         {
-            lives = lives - fails;
+            Lives = Lives - fails;
         }
     }
 }
