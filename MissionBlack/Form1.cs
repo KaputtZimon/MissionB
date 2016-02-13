@@ -76,7 +76,12 @@ namespace MissionBlack
             if (hit != null)
             {
                 targets.Remove(hit);
+                ifm.Hit();
                 targets.Add(target = new Target() { iLeft = rnd.Next(100, 400), iTop = rnd.Next(100, 400), width = 0, height = 0 });
+            }
+            else
+            {
+                ifm.Miss();
             }
         }
 
@@ -84,7 +89,7 @@ namespace MissionBlack
         {
             if (!paused)
             {
-                timerTmp = Math.DivRem(timeCounter, 1000, out timeTarget);
+                timerTmp = Math.DivRem(timeCounter, 100, out timeTarget);
                 if (timeTarget == 0)
                 //if(true)
                 {

@@ -51,10 +51,9 @@ namespace MissionBlack
                 top = iTop - (height / 2);
                 if (width <= 0 && height <= 0)
                 {
-                    //EDIT
-                    growing = true;
+                    return true;
                 }
-                return true;
+                return false;
             }
         }
     }
