@@ -70,7 +70,14 @@ namespace MissionBlack
 
         private void Mainframe_MouseClick(object sender, MouseEventArgs e)
         {
+            PointF mouse = new PointF(e.X, e.Y);
 
+            var hit = targets.Where(tar => GetDistance(mouse, tar.Origin) <= tar.CurrentRadius).FirstOrDefault();
+            if (hit != null)
+            {
+                targets.Remove(hit);
+                targets.Add(target = new Target() { iLeft = rnd.Next(100, 400), iTop = rnd.Next(100, 400), width = 0, height = 0 });
+            }
         }
 
         private void GameLoop_Tick(object sender, EventArgs e)
@@ -78,8 +85,8 @@ namespace MissionBlack
             if (!paused)
             {
                 timerTmp = Math.DivRem(timeCounter, 1000, out timeTarget);
-                //if (timeTarget == 0)
-                if(true)
+                if (timeTarget == 0)
+                //if(true)
                 {
                     UpdateTargets();
                 }
@@ -139,6 +146,15 @@ namespace MissionBlack
                 this.Refresh();
                 paused = false;
             }
+        }
+        private void Mainframe_Click(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private double GetDistance(PointF p1, PointF p2)
+        {
+            return Math.Sqrt(Math.Pow(Math.Abs(p1.X) - Math.Abs(p2.X), 2) + Math.Pow(Math.Abs(p1.Y) - Math.Abs(p2.Y), 2));
         }
     }
 }

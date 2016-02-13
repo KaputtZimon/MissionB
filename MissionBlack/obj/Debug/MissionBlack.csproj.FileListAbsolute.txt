@@ -7,3 +7,12 @@ C:\Users\Cptn\documents\visual studio 2015\Projects\MissionBlack\MissionBlack\ob
 C:\Users\Cptn\documents\visual studio 2015\Projects\MissionBlack\MissionBlack\obj\Debug\MissionBlack.csproj.GenerateResource.Cache
 C:\Users\Cptn\documents\visual studio 2015\Projects\MissionBlack\MissionBlack\obj\Debug\MissionBlack.exe
 C:\Users\Cptn\documents\visual studio 2015\Projects\MissionBlack\MissionBlack\obj\Debug\MissionBlack.pdb
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\bin\Debug\MissionBlack.exe.config
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\obj\Debug\MissionBlack.exe
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\obj\Debug\MissionBlack.pdb
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\bin\Debug\MissionBlack.exe
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\bin\Debug\MissionBlack.pdb
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\obj\Debug\MissionBlack.csprojResolveAssemblyReference.cache
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\obj\Debug\MissionBlack.Mainframe.resources
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\obj\Debug\MissionBlack.Properties.Resources.resources
+C:\Users\Cptn\Documents\GitHub\MissionBlack\MissionBlack\obj\Debug\MissionBlack.csproj.GenerateResource.Cache

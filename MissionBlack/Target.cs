@@ -17,6 +17,21 @@ namespace MissionBlack
         {
         }
 
+        public PointF Origin
+        {
+            get
+            {
+                return new PointF(iLeft, iTop);
+            }
+        }
+        public double CurrentRadius
+        {
+            get
+            {
+                return (double)(width / 2);
+            }
+        }
+
         public bool Update()
         {
             if (growing)
